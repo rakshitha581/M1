@@ -10,13 +10,28 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    char ch1, ch2, ch3
+    printf("Enter first character: ");
+    scanf(" %c", &ch1);
+
+    printf("Enter second character: ");
+    scanf(" %c", &ch2);
+
+    printf("Enter third character: ");
+    scanf(" %c", &c)
+    printf("Characters in reverse order: %c %c %c\n", ch3, ch2, ch1);
+
+    return 0;
+}
+```
 
 ## OUTPUT:
 
-
-
-
-
+![Screenshot 2025-05-14 210722](https://github.com/user-attachments/assets/6690b944-578e-42e9-af96-12f9b13410e6)
 
 
 
@@ -46,9 +61,23 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int A
+    if (A > 0) {
+        printf("A is a positive number.\n");
+    } else {
+        printf("A is not a positive number.\n");
+    }
+
+    return 0;
+}
+```
 # OUTPUT:
 
+![Screenshot 2025-05-14 210808](https://github.com/user-attachments/assets/072ce56b-89d9-47b9-b472-cc93ce069777)
 
 
 
@@ -80,9 +109,23 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    float num1, num2, min;
+    scanf("%f", &num1);
+    scanf("%f", &num2);
+    min = (num1 < num2) ? num1 : num2;
+
+    printf("Minimum of %.2f and %.2f is %.2f\n", num1, num2, min);
+
+    return 0;
+}
+```
 ## OUTPUT:
 
+![Screenshot 2025-05-14 210846](https://github.com/user-attachments/assets/c77323f7-741f-4c1c-90ce-a6c0e3406dc5)
 
 
 
@@ -112,7 +155,22 @@ Write a C program to check whether the input value is equal to 1 using simple if
 
 ## PROGRAM:
 
+```
+#include <stdio.h>
+
+int main() {
+    int value;
+    scanf("%d", &value);
+
+    if (value == 1) {
+        printf("The value is equal to 1.\n");
+    }
+
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-05-14 210917](https://github.com/user-attachments/assets/265f481c-2e3f-4cc2-bcfe-9f931056daec)
 
 
 
@@ -131,8 +189,8 @@ Thus the program to check whether the input value is equal to 1 using simple if 
 
 # EX-05- Calculating Total, Percentage, And Division Using Conditional Statements 
 ## AIM:
-To write a C program that reads marks of three subjects, calculates the total and percentage, and then determines the division (First, Second, Pass, or Fail) based on the percentage and minimum marks criteria.
-## ALGORITHM:
+entage, and then determines the division (First, Second, Pass, or Fail) based on the percentage and minimum marks criteria.
+## ALGORITHM:To write a C program that reads marks of three subjects, calculates the total and perc
 1.	Start
 2.	Declare integer variables m1, m2, m3 for marks, and float variables tot, per.
 3.	Input the marks for three subjects.
@@ -147,8 +205,41 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int sub1, sub2, sub3, total;
+    float percentage;
+
+    scanf("%d", &sub1);
+    scanf("%d", &sub2);
+
+    scanf("%d", &sub3);
+    if (sub1 < 35 || sub2 < 35 || sub3 < 35) {
+        printf("Result: Fail (One or more subjects below 35 marks)\n");
+    } else {
+        total = sub1 + sub2 + sub3;
+        percentage = total / 3.0;
+        printf("\nTotal Marks = %d\n", total);
+        printf("Percentage = %.2f%%\n", percentage);
+        if (percentage >= 60) {
+            printf("Division: First\n");
+        } else if (percentage >= 50) {
+            printf("Division: Second\n");
+        } else if (percentage >= 35) {
+            printf("Division: Pass\n");
+        } else {
+            printf("Division: Fail\n");
+        }
+    }
+
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-05-14 210954](https://github.com/user-attachments/assets/111a7982-8db4-4cce-8d80-503eb77336d0)
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
